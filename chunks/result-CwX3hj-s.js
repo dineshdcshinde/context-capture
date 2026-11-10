@@ -1,0 +1,1 @@
+var e=e=>({ok:!0,value:e}),t=e=>({ok:!1,reason:e}),n=e=>e instanceof Error?e.message:String(e);export{e as n,n as r,t};
