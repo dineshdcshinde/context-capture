@@ -1,1 +1,69 @@
-{"manifest_version":3,"name":"Context Capture","description":"Click any element on a React app and paste its component, errors and screenshot into your AI coding tool.","version":"0.1.0","icons":{"16":"icons/icon-16.png","32":"icons/icon-32.png","48":"icons/icon-48.png","128":"icons/icon-128.png"},"permissions":["activeTab","storage","downloads","offscreen","clipboardWrite"],"host_permissions":["<all_urls>"],"minimum_chrome_version":"116","commands":{"start-capture":{"suggested_key":{"default":"Alt+Shift+C"},"description":"Capture an element on this page"}},"background":{"service_worker":"background.js"},"action":{"default_title":"Context Capture","default_popup":"popup.html","default_icon":{"16":"icons/icon-16.png","32":"icons/icon-32.png","48":"icons/icon-48.png","128":"icons/icon-128.png"}},"options_ui":{"open_in_tab":true,"page":"options.html"},"content_scripts":[{"matches":["<all_urls>"],"run_at":"document_start","js":["content-scripts/content.js"]},{"matches":["<all_urls>"],"run_at":"document_start","js":["content-scripts/page-agent.js"],"world":"MAIN"}]}
+{
+    "manifest_version": 3,
+    "name": "Context Capture",
+    "description": "Click any element on a React app and paste its component, errors and screenshot into your AI coding tool.",
+    "version": "0.1.0",
+    "icons": {
+        "16": "icons/icon-16.png",
+        "32": "icons/icon-32.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "downloads",
+        "offscreen",
+        "clipboardWrite"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "minimum_chrome_version": "116",
+    "commands": {
+        "start-capture": {
+            "suggested_key": {
+                "default": "Alt+Shift+C"
+            },
+            "description": "Capture an element on this page"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "Context Capture",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon-16.png",
+            "32": "icons/icon-32.png",
+            "48": "icons/icon-48.png",
+            "128": "icons/icon-128.png"
+        }
+    },
+    "options_ui": {
+        "open_in_tab": true,
+        "page": "options.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_start",
+            "js": [
+                "content-scripts/content.js"
+            ]
+        },
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_start",
+            "js": [
+                "content-scripts/page-agent.js"
+            ],
+            "world": "MAIN"
+        }
+    ]
+}

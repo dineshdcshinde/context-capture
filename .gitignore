@@ -1,0 +1,22 @@
+# Packaged builds (Chrome Web Store uploads, test builds)
+*.zip
+*.crx
+
+# Extension signing key: never commit
+*.pem
+
+# Git bundles of the source project
+*.bundle
+
+# Dependencies and build output, if a build setup is added later
+node_modules/
+.output/
+dist/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
